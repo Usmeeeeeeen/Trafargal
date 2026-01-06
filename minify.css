@@ -1,0 +1,527 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.category::before,
+.header-container::after {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  background-repeat: no-repeat;
+}
+@font-face {
+  font-display: swap;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/mulish-v18-latin-regular.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/mulish-v18-latin-500.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/mulish-v18-latin-600.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/mulish-v18-latin-700.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/mulish-v18-latin-800.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/mulish-v18-latin-900.woff2") format("woff2");
+}
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --blue: #458ff6;
+  --gray: #7d7987;
+}
+::selection {
+  background-color: var(--black);
+  color: var(--white);
+}
+*,
+::after,
+::before {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+li,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  display: inline-block;
+}
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  min-width: 320px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: var(--white);
+  color: var(--black);
+  overflow-x: hidden;
+}
+.BtnBtn,
+.hero-box-btn {
+  padding: 16px 40px;
+  cursor: pointer;
+  border-radius: 55px;
+  font-family: "Mulish";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0;
+  background-color: var(--blue);
+  color: var(--white);
+  border: 2px dotted var(--blue);
+  transition: 450ms;
+}
+.BtnBtn:hover,
+.hero-box-btn:hover {
+  border: 2px dotted var(--blue);
+  background-color: var(--white);
+  color: var(--blue);
+}
+.container {
+  width: 100%;
+  max-width: 1366px;
+  padding: 0 100px;
+  margin: 0 auto;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.Cervices,
+.category {
+  width: 100%;
+  position: relative;
+}
+.header-container {
+  display: flex;
+  padding: 49px 35px 84px 135px;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-container::after {
+  background-image: url("./Pictures/element.png");
+  top: 199px;
+  left: 2px;
+  width: 132px;
+  height: 115px;
+}
+.header-container-logo {
+  cursor: pointer;
+  vertical-align: middle;
+  transition: 750ms;
+}
+.header-container-link-text,
+.header-container-links-text {
+  font-size: 18px;
+  line-height: 100%;
+  transition: 450ms ease-in;
+}
+.check-card:hover,
+.header-container-logo:hover {
+  transform: scale(1.1);
+}
+.header-container-list {
+  display: flex;
+}
+.header-container-links-text {
+  color: #8f8a9a;
+  font-family: "Mulish";
+  font-weight: 400;
+  letter-spacing: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.header-container-link-text {
+  color: #000;
+  font-family: "Mulish";
+  font-weight: 700;
+  letter-spacing: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.category-cards-card-text,
+.category-container-text,
+.hero-box-text {
+  color: var(--gray);
+  letter-spacing: 0;
+  font-family: "Mulish";
+}
+.header-container-links-text:hover {
+  color: #87ceeb;
+  transform: scale(1.1);
+}
+.header-container-link-text:hover {
+  color: #00f;
+  transform: scale(1.1);
+}
+.hero-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero-left-box {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 35px;
+  padding-top: 93px;
+}
+.hero-box-title {
+  font-family: "Mulish";
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: 0;
+}
+.hero-box-text {
+  font-weight: 300;
+  font-size: 21px;
+  line-height: 32px;
+}
+.hero-img {
+  padding-left: 102px;
+}
+.Cervices {
+  margin-top: 279px;
+}
+.category {
+  margin-top: 67px;
+}
+.category-conteiner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 29px;
+}
+.category::before {
+  background-image: url("./Pictures/Frame.svg");
+  top: 20px;
+  left: -20px;
+  width: 853px;
+  height: 968px;
+}
+.category2-conteiner::after,
+.category::after {
+  background-image: url("./Pictures/element.png");
+  width: 132px;
+  height: 115px;
+  position: absolute;
+  content: "";
+  display: inline-block;
+  background-repeat: no-repeat;
+}
+.category::after {
+  right: 165px;
+  top: 299px;
+}
+.category-container-title,
+.category2-div-title,
+.category3-div-title,
+.check-title {
+  font-family: "Mulish";
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 56px;
+  letter-spacing: 0;
+}
+.category2-hr,
+.category3-hr,
+.hr {
+  width: 59px;
+  height: 2px;
+  background-color: #000;
+}
+.category-container-text {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+}
+.category-cards {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.category-cards-card {
+  border: 4px dotted var(--blue);
+  padding: 47px 50px 47px 38px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  text-align: start;
+  gap: 15px;
+  width: 350px;
+  height: 354px;
+  box-shadow: 10px 40px 50px 0 #e5e9f666;
+  background: #fff;
+  border-radius: 18px;
+  transition: 450ms;
+}
+.category-cards-card:hover {
+  transform: scale(1.1);
+  -webkit-box-shadow: 0 6px 100px -22px var(--blue);
+  -moz-box-shadow: 0 6px 100px -22px var(--blue);
+  box-shadow: 0 6px 100px -22px var(--blue);
+}
+.category-cards-card-title {
+  font-family: "Mulish";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 56px;
+  letter-spacing: 0;
+}
+.category-cards-card-text {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+}
+.category2-conteiner,
+.category3-conteiner {
+  margin-top: 130px;
+  display: flex;
+  padding: 0;
+}
+.category2-conteiner::after {
+  top: 2770px;
+  right: -44px;
+}
+.category2-div,
+.category3-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 31px;
+}
+.category2-div-text,
+.category3-div-text {
+  font-family: "Mulish";
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0;
+}
+.check {
+  position: relative;
+}
+.check-container {
+  display: flex;
+  background-size: cover;
+  z-index: 1;
+  overflow: visible;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 1366px;
+  margin-top: 179px;
+  margin-bottom: 200px;
+}
+.check::before {
+  position: absolute;
+  background-image: url("./Pictures/element.svg");
+  top: 14px;
+  right: -14px;
+  content: "";
+  display: inline-block;
+  background-repeat: no-repeat;
+  width: 537px;
+  height: 792px;
+  z-index: -1;
+}
+.check::after,
+.footer-container::before {
+  width: 132px;
+  height: 115px;
+  z-index: -1;
+  position: absolute;
+  background-image: url("./Pictures/element.png");
+  content: "";
+  display: inline-block;
+  background-repeat: no-repeat;
+}
+.check::after {
+  top: 98px;
+  left: 126px;
+}
+.check-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 35px;
+}
+.check-div {
+  padding-left: 33px;
+  padding-right: 51px;
+  padding-bottom: 35px;
+}
+.check-card {
+  display: flex;
+  background-color: #fff;
+  flex-direction: column;
+  gap: 24px;
+  box-shadow: 10px 40px 50px 0 #e5e9f666;
+  transition: 750ms;
+}
+.check-card-img {
+  margin-bottom: 24px;
+}
+.check-card-title {
+  font-family: "Mulish";
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 32px;
+  letter-spacing: 0;
+}
+.check-card-text,
+.footer-div-prava,
+.footer-div-text {
+  font-weight: 300;
+  line-height: 28px;
+  font-family: "Mulish";
+  letter-spacing: 0;
+}
+.check-card-link {
+  margin-top: 25px;
+}
+.check-card-text {
+  font-size: 16px;
+  color: #7d7987;
+  margin-top: 12px;
+}
+.footer {
+  padding: 118px 0;
+  background: #67c3f3;
+  background: linear-gradient(180deg, #67c3f3 23%, #5a98f2 71%);
+}
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: 2;
+  position: relative;
+}
+.footer-container::before {
+  top: -187px;
+  right: 90px;
+}
+.footer-container::after {
+  position: absolute;
+  background-image: url("./Pictures/element.png");
+  bottom: -115px;
+  left: -65px;
+  content: "";
+  display: inline-block;
+  background-repeat: no-repeat;
+  width: 102px;
+  height: 95px;
+  z-index: 1;
+}
+.footer-div,
+.footer-div1,
+.footer-div2,
+.footer-div3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+.footer-div-text {
+  font-size: 18px;
+  color: var(--white);
+  margin-bottom: 31px;
+}
+.a {
+  margin-bottom: 17px;
+}
+.footer-div-prava {
+  font-size: 16px;
+  color: var(--white);
+}
+.footer-div-lists-unique {
+  font-family: "Mulish";
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 60px;
+  letter-spacing: 0;
+  color: var(--white);
+}
+.footer-div-links {
+  font-family: "Mulish";
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 38px;
+  letter-spacing: 0;
+  color: var(--white);
+  transition: 0.5s;
+}
+.footer-div-links:hover {
+  color: var(--white);
+  text-shadow: #fff 0 0 5px, #fff 0 0 10px, #fff 0 0 15px, #fff 0 0 20px,
+    #fff 0 0 30px, #fff 0 0 40px, #fff 0 0 50px, #fff 0 0 75px;
+}
